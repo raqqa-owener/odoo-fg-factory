@@ -1,0 +1,424 @@
+field_id,source_model,field_name,field_display_name_ja,target_model,relation_table,relation_column1,relation_column2,field_state,field_class_initial
+4912,account.account,company_ids,会社,res.company,account_account_res_company_rel,account_account_id,res_company_id,base,SF
+4886,account.account,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+4914,account.account,tag_ids,タグ,account.account.tag,account_account_account_tag,account_account_id,account_account_tag_id,base,SF
+4910,account.account,tax_ids,デフォルト税,account.tax,account_account_tax_default_rel,account_id,tax_id,base,SF
+8936,account.analytic.account,bom_ids,部品表,mrp.bom,account_analytic_account_mrp_bom_rel,account_analytic_account_id,mrp_bom_id,base,SF
+3288,account.analytic.account,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+8934,account.analytic.account,production_ids,生産,mrp.production,account_analytic_account_mrp_production_rel,account_analytic_account_id,mrp_production_id,base,SF
+8938,account.analytic.account,workcenter_ids,作業区,mrp.workcenter,account_analytic_account_mrp_workcenter_rel,account_analytic_account_id,mrp_workcenter_id,base,SF
+3347,account.analytic.distribution.model,distribution_analytic_account_ids,分配分析勘定,account.analytic.account,,,,base,SF
+6028,account.automatic.entry.wizard,move_line_ids,移動明細,account.move.line,account_automatic_entry_wizard_account_move_line_rel,account_automatic_entry_wizard_id,account_move_line_id,base,SF
+5589,account.bank.statement,attachment_ids,添付,ir.attachment,account_bank_statement_ir_attachment_rel,account_bank_statement_id,ir_attachment_id,base,SF
+5672,account.bank.statement.line,adjusting_entries_move_ids,作成済調整仕訳,account.move,,,,base,SF
+5669,account.bank.statement.line,adjusting_entry_origin_move_ids,仕訳元記帳の調整,account.move,,,,base,SF
+6541,account.bank.statement.line,authorized_transaction_ids,承認された取引,payment.transaction,,,,base,SF
+5772,account.bank.statement.line,duplicated_ref_ids,重複した番号,account.move,,,,base,SF
+5665,account.bank.statement.line,matched_payment_ids,照合済支払,account.payment,,,,base,SF
+5639,account.bank.statement.line,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+5600,account.bank.statement.line,payment_ids,自動生成された支払,account.payment,account_payment_account_bank_statement_line_rel,account_bank_statement_line_id,account_payment_id,base,SF
+5666,account.bank.statement.line,reconciled_payment_ids,消込済の支払い,account.payment,,,,base,SF
+5684,account.bank.statement.line,suitable_journal_ids,適用可能な仕訳帳,account.journal,,,,base,SF
+6540,account.bank.statement.line,transaction_ids,取引,payment.transaction,,,,base,SF
+8979,account.bank.statement.line,wip_production_ids,関連WIP製造オーダ,mrp.production,,,,base,SF
+4756,account.fiscal.position,state_ids,州,res.country.state,account_fiscal_position_res_country_state_rel,account_fiscal_position_id,res_country_state_id,base,SF
+4746,account.fiscal.position,tax_ids,税金,account.tax,account_fiscal_position_account_tax_rel,account_fiscal_position_id,account_tax_id,base,SF
+5025,account.journal,available_payment_method_ids,利用可能な支払い方法,account.payment.method,,,,base,SF
+5024,account.journal,journal_group_ids,元帳グループ,account.journal.group,account_journal_account_journal_group_rel,account_journal_id,account_journal_group_id,base,SF
+4972,account.journal,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+4952,account.journal.group,excluded_journal_ids,除外する仕訳帳,account.journal,account_journal_account_journal_group_rel,account_journal_group_id,account_journal_id,base,SF
+6304,account.merge.wizard,account_ids,勘定科目,account.account,account_account_account_merge_wizard_rel,account_merge_wizard_id,account_account_id,base,SF
+6320,account.merge.wizard.line,company_ids,会社,res.company,,,,base,SF
+4612,account.move,adjusting_entries_move_ids,作成済調整仕訳,account.move,adjusting_entries__account_move,adjusting_entry_move_id,move_id,base,SF
+4609,account.move,adjusting_entry_origin_move_ids,仕訳元記帳の調整,account.move,adjusting_entries__account_move,move_id,adjusting_entry_move_id,base,SF
+6498,account.move,authorized_transaction_ids,承認された取引,payment.transaction,,,,base,SF
+4716,account.move,duplicated_ref_ids,重複した番号,account.move,,,,base,SF
+4604,account.move,matched_payment_ids,照合済支払,account.payment,account_move__account_payment,invoice_id,payment_id,base,SF
+4576,account.move,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+4605,account.move,reconciled_payment_ids,消込済の支払い,account.payment,,,,base,SF
+4624,account.move,suitable_journal_ids,適用可能な仕訳帳,account.journal,,,,base,SF
+6497,account.move,transaction_ids,取引,payment.transaction,account_invoice_transaction_rel,invoice_id,transaction_id,base,SF
+8953,account.move,wip_production_ids,関連WIP製造オーダ,mrp.production,wip_move_production_rel,move_id,production_id,base,SF
+5415,account.move.line,allowed_uom_ids,許可された単位,uom.uom,,,,base,SF
+5353,account.move.line,distribution_analytic_account_ids,分配分析勘定,account.analytic.account,,,,base,SF
+5403,account.move.line,reconciled_lines_excluding_exchange_diff_ids,為替差損益を除く消込済仕訳明細,account.move.line,,,,base,SF
+5402,account.move.line,reconciled_lines_ids,消込済明細,account.move.line,,,,base,SF
+6553,account.move.line,sale_line_ids,販売オーダ明細,sale.order.line,sale_order_line_invoice_rel,invoice_line_id,order_line_id,base,SF
+5388,account.move.line,tax_ids,税金,account.tax,account_move_line_account_tax_rel,account_move_line_id,account_tax_id,base,SF
+5394,account.move.line,tax_tag_ids,タグ,account.account.tag,account_account_tag_account_move_line_rel,account_move_line_id,account_account_tag_id,base,SF
+6078,account.move.reversal,available_journal_ids,利用可能な仕訳帳,account.journal,,,,base,SF
+6072,account.move.reversal,move_ids,仕訳,account.move,account_move_reversal_move,reversal_id,move_id,base,SF
+6073,account.move.reversal,new_move_ids,新しい移動,account.move,account_move_reversal_new_move,reversal_id,new_move_id,base,SF
+6222,account.move.send.batch.wizard,move_ids,仕訳,account.move,account_move_account_move_send_batch_wizard_rel,account_move_send_batch_wizard_id,account_move_id,base,SF
+6210,account.move.send.wizard,mail_partner_ids,終了日,res.partner,account_move_send_wizard_res_partner_rel,account_move_send_wizard_id,res_partner_id,base,SF
+5514,account.payment,available_journal_ids,利用可能な仕訳帳,account.journal,,,,base,SF
+5507,account.payment,available_partner_bank_ids,使用可能なパートナー銀行,res.partner.bank,,,,base,SF
+5512,account.payment,available_payment_method_line_ids,利用可能な支払方法ライン,account.payment.method.line,,,,base,SF
+5541,account.payment,duplicate_payment_ids,支払を複製,account.payment,,,,base,SF
+5525,account.payment,invoice_ids,顧客請求書,account.move,account_move__account_payment,payment_id,invoice_id,base,SF
+5487,account.payment,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+5529,account.payment,reconciled_bill_ids,消込済手形,account.move,,,,base,SF
+5526,account.payment,reconciled_invoice_ids,消込済請求書,account.move,,,,base,SF
+5531,account.payment,reconciled_statement_line_ids,消込済明細の明細,account.bank.statement.line,,,,base,SF
+6504,account.payment,suitable_payment_token_ids,適切な支払トークン,payment.token,,,,base,SF
+5567,account.payment.method.line,available_payment_method_ids,利用可能な支払い方法,account.payment.method,,,,base,SF
+6243,account.payment.register,available_journal_ids,利用可能な仕訳帳,account.journal,,,,base,SF
+6244,account.payment.register,available_partner_bank_ids,使用可能なパートナー銀行,res.partner.bank,,,,base,SF
+6265,account.payment.register,available_payment_method_line_ids,利用可能な支払方法ライン,account.payment.method.line,,,,base,SF
+6276,account.payment.register,duplicate_payment_ids,支払を複製,account.payment,,,,base,SF
+6254,account.payment.register,line_ids,仕訳明細,account.move.line,account_payment_register_move_line_rel,wizard_id,line_id,base,SF
+6282,account.payment.register,missing_account_partners,取引先口座がありません,res.partner,,,,base,SF
+6515,account.payment.register,suitable_payment_token_ids,適切な支払トークン,payment.token,,,,base,SF
+6279,account.payment.register,untrusted_bank_ids,信頼できない銀行,res.partner.bank,,,,base,SF
+5300,account.reconcile.model,match_journal_ids,仕訳帳,account.journal,account_journal_account_reconcile_model_rel,account_reconcile_model_id,account_journal_id,base,SF
+5306,account.reconcile.model,match_partner_ids,取引先,res.partner,account_reconcile_model_res_partner_rel,account_reconcile_model_id,res_partner_id,base,SF
+5282,account.reconcile.model,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+5263,account.reconcile.model.line,distribution_analytic_account_ids,分配分析勘定,account.analytic.account,,,,base,SF
+5273,account.reconcile.model.line,tax_ids,税金,account.tax,account_reconcile_model_line_account_tax_rel,account_reconcile_model_line_id,account_tax_id,base,SF
+5915,account.report,section_main_report_ids,以下のセクション:,account.report,account_report_section_rel,sub_report_id,main_report_id,base,SF
+5914,account.report,section_report_ids,セクション,account.report,account_report_section_rel,main_report_id,sub_report_id,base,SF
+6094,account.resequence.wizard,move_ids,仕訳,account.move,account_move_account_resequence_wizard_rel,account_resequence_wizard_id,account_move_id,base,SF
+6110,account.secure.entries.wizard,move_to_hash_ids,ハッシュに移動,account.move,,,,base,SF
+6109,account.secure.entries.wizard,not_hashable_unlocked_move_ids,ハッシュ化不可 ロック解除済仕訳,account.move,,,,base,SF
+6108,account.secure.entries.wizard,unreconciled_bank_statement_line_ids,未消込銀行取引明細書の明細,account.bank.statement.line,,,,base,SF
+6187,account.setup.bank.manual.config,duplicate_bank_partner_ids,重複銀行口座のある取引先,res.partner,,,,base,SF
+6152,account.setup.bank.manual.config,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+5213,account.tax,children_tax_ids,子供税,account.tax,account_tax_filiation_rel,parent_tax,child_tax,base,SF
+5206,account.tax,fiscal_position_ids,会計ポジション,account.fiscal.position,account_fiscal_position_account_tax_rel,account_tax_id,account_fiscal_position_id,base,SF
+5192,account.tax,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+5207,account.tax,original_tax_ids,置換える税,account.tax,account_tax_alternatives,dest_tax_id,src_tax_id,base,SF
+5208,account.tax,replacing_tax_ids,置き換え先：,account.tax,account_tax_alternatives,src_tax_id,dest_tax_id,base,SF
+5249,account.tax.repartition.line,tag_ids,税グリッド,account.account.tag,account_account_tag_account_tax_repartition_line_rel,account_tax_repartition_line_id,account_account_tag_id,base,SF
+3342,analytic.mixin,distribution_analytic_account_ids,分配分析勘定,account.analytic.account,,,,base,SF
+1521,base.language.export,modules,エクスポートするモジュール,ir.module.module,rel_modules_langexport,wiz_id,module_id,base,SF
+1480,base.language.install,lang_ids,言語,res.lang,res_lang_install_rel,language_wizard_id,lang_id,base,SF
+3369,base.module.install.request,user_ids,以下に送信:,res.users,,,,base,SF
+3378,base.module.install.review,module_ids,依存アプリ,ir.module.module,,,,base,SF
+1509,base.module.uninstall,impacted_module_ids,影響を受けるモジュール,ir.module.module,,,,base,SF
+1510,base.module.uninstall,model_ids,影響を受けるモデル,ir.model,,,,base,SF
+1508,base.module.uninstall,module_ids,モジュール,ir.module.module,base_module_uninstall_ir_module_module_rel,base_module_uninstall_id,ir_module_module_id,base,SF
+1551,base.partner.merge.automatic.wizard,partner_ids,連絡先,res.partner,base_partner_merge_automatic_wizard_res_partner_rel,base_partner_merge_automatic_wizard_id,res_partner_id,base,SF
+8929,confirm.stock.sms,pick_ids,ピッキング,stock.picking,stock_picking_sms_rel,confirm_stock_sms_id,stock_picking_id,base,SF
+4091,crm.team,favorite_user_ids,お気に入りメンバー,res.users,team_favorite_user_rel,team_id,user_id,base,SF
+4086,crm.team,member_company_ids,メンバー会社,res.company,,,,base,SF
+4085,crm.team,member_ids,販売担当者,res.users,,,,base,SF
+4070,crm.team,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+4041,crm.team.member,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+4052,crm.team.member,user_company_ids,ユーザーの会社,res.company,,,,base,SF
+4051,crm.team.member,user_in_teams_ids,チーム内のユーザー,res.users,,,,base,SF
+4362,digest.digest,user_ids,宛先,res.users,digest_digest_res_users_rel,digest_digest_id,res_users_id,base,SF
+4382,digest.tip,user_ids,宛先,res.users,digest_tip_res_users_rel,digest_tip_id,res_users_id,base,SF
+3013,discuss.channel,channel_partner_ids,取引先,res.partner,,,,base,SF
+3029,discuss.channel,group_ids,自動サブスクリプション,res.groups,discuss_channel_res_groups_rel,discuss_channel_id,res_groups_id,base,SF
+2996,discuss.channel,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+1808,iap.account,company_ids,会社,res.company,iap_account_res_company_rel,iap_account_id,res_company_id,base,SF
+3403,iap.account,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+1811,iap.account,warning_user_ids,Eメール警告受信者,res.users,iap_account_res_users_rel,iap_account_id,res_users_id,base,SF
+286,ir.actions.act_window,group_ids,グループ,res.groups,ir_act_window_group_rel,act_id,gid,base,SF
+468,ir.actions.report,group_ids,グループ,res.groups,res_groups_report_rel,uid,gid,base,SF
+370,ir.actions.server,available_model_ids,利用可能モデル,ir.model,,,,base,SF
+381,ir.actions.server,group_ids,許可されたグループ,res.groups,ir_act_server_group_rel,act_id,gid,base,SF
+2784,ir.actions.server,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+2803,ir.actions.server,partner_ids,取引先,res.partner,ir_act_server_res_partner_rel,ir_act_server_id,res_partner_id,base,SF
+396,ir.actions.server,webhook_field_ids,Webhookフィールド,ir.model.fields,ir_act_server_webhook_field_rel,server_id,field_id,base,SF
+533,ir.cron,available_model_ids,利用可能モデル,ir.model,,,,base,SF
+544,ir.cron,group_ids,許可されたグループ,res.groups,,,,base,SF
+2827,ir.cron,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+2850,ir.cron,partner_ids,取引先,res.partner,,,,base,SF
+559,ir.cron,webhook_field_ids,Webhookフィールド,ir.model.fields,,,,base,SF
+444,ir.embedded.actions,groups_ids,グループ,res.groups,ir_embedded_actions_res_groups_rel,ir_embedded_actions_id,res_groups_id,base,SF
+583,ir.filters,user_ids,ユーザ,res.users,ir_filters_res_users_rel,ir_filters_id,res_users_id,base,SF
+12,ir.model,inherited_model_ids,継承モデル,ir.model,,,,base,SF
+51,ir.model.fields,groups,グループ,res.groups,ir_model_fields_group_rel,field_id,group_id,base,SF
+768,ir.module.module,country_ids,国,res.country,module_country,module_id,country_id,base,SF
+630,ir.rule,groups,グループ,res.groups,rule_group_rel,rule_group_id,group_id,base,SF
+175,ir.ui.menu,group_ids,グループ,res.groups,ir_ui_menu_group_rel,menu_id,gid,base,SF
+210,ir.ui.view,group_ids,グループ,res.groups,ir_ui_view_group_rel,view_id,group_id,base,SF
+7990,lot.label.layout,move_line_ids,移動明細,stock.move.line,lot_label_layout_stock_move_line_rel,lot_label_layout_id,stock_move_line_id,base,SF
+2364,mail.activity,attachment_ids,添付,ir.attachment,activity_attachment_rel,activity_id,attachment_id,base,SF
+2371,mail.activity,mail_template_ids,メールテンプレート,mail.template,,,,base,SF
+2408,mail.activity.plan.template,next_activity_ids,次の活動,mail.activity.type,mail_activity_plan_template_mail_activity_type_rel,mail_activity_plan_template_id,mail_activity_type_id,base,SF
+3184,mail.activity.schedule,plan_available_ids,利用可能な計画,mail.activity.plan,mail_activity_plan_mail_activity_schedule_rel,mail_activity_schedule_id,mail_activity_plan_id,base,SF
+2340,mail.activity.type,mail_template_ids,メールテンプレート,mail.template,mail_activity_type_mail_template_rel,mail_activity_type_id,mail_template_id,base,SF
+2338,mail.activity.type,previous_type_ids,先行する活動,mail.activity.type,mail_activity_rel,recommended_id,activity_id,base,SF
+2337,mail.activity.type,suggested_next_type_ids,提案,mail.activity.type,mail_activity_rel,activity_id,recommended_id,base,SF
+2417,mail.blacklist,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+2748,mail.canned.response,group_ids,承認グループ,res.groups,mail_canned_response_res_groups_rel,mail_canned_response_id,res_groups_id,base,SF
+3134,mail.compose.message,attachment_ids,添付,ir.attachment,mail_compose_message_ir_attachments_rel,wizard_id,attachment_id,base,SF
+3156,mail.compose.message,partner_ids,追加連絡先,res.partner,mail_compose_message_res_partner_rel,wizard_id,partner_id,base,SF
+2436,mail.followers,subtype_ids,サブタイプ,mail.message.subtype,mail_followers_mail_message_subtype_rel,mail_followers_id,mail_message_subtype_id,base,SF
+3246,mail.followers.edit,partner_ids,フォロワー,res.partner,mail_followers_edit_res_partner_rel,mail_followers_edit_id,res_partner_id,base,SF
+3070,mail.guest,channel_ids,チャネル,discuss.channel,discuss_channel_member,guest_id,channel_id,base,SF
+2598,mail.mail,attachment_ids,添付,ir.attachment,,,,base,SF
+2595,mail.mail,linked_message_ids,リンクされたメッセージ,mail.message,,,,base,SF
+2618,mail.mail,notified_partner_ids,アクションが必要な取引先,res.partner,,,,base,SF
+2614,mail.mail,partner_ids,宛先,res.partner,,,,base,SF
+2580,mail.mail,recipient_ids,宛先 (取引先),res.partner,mail_mail_res_partner_rel,mail_mail_id,res_partner_id,base,SF
+2622,mail.mail,starred_partner_ids,いいねした人,res.partner,,,,base,SF
+2576,mail.mail,unrestricted_attachment_ids,制限されていない添付,ir.attachment,,,,base,SF
+2524,mail.message,attachment_ids,添付,ir.attachment,message_attachment_rel,message_id,attachment_id,base,SF
+2521,mail.message,linked_message_ids,リンクされたメッセージ,mail.message,,,,base,SF
+2545,mail.message,notified_partner_ids,アクションが必要な取引先,res.partner,mail_notification,mail_message_id,res_partner_id,base,SF
+2541,mail.message,partner_ids,宛先,res.partner,mail_message_res_partner_rel,mail_message_id,res_partner_id,base,SF
+2549,mail.message,starred_partner_ids,いいねした人,res.partner,mail_message_res_partner_starred_rel,mail_message_id,res_partner_id,base,SF
+2665,mail.scheduled.message,attachment_ids,添付,ir.attachment,scheduled_message_attachment_rel,scheduled_message_id,attachment_id,base,SF
+2670,mail.scheduled.message,partner_ids,宛先,res.partner,mail_scheduled_message_res_partner_rel,mail_scheduled_message_id,res_partner_id,base,SF
+2718,mail.template,attachment_ids,添付,ir.attachment,email_template_attachment_rel,email_template_id,attachment_id,base,SF
+2719,mail.template,report_template_ids,ダイナミックレポート,ir.actions.report,mail_template_ir_actions_report_rel,mail_template_id,ir_actions_report_id,base,SF
+3226,mail.template.preview,attachment_ids,添付,ir.attachment,,,,base,SF
+3229,mail.template.preview,partner_ids,宛先,res.partner,,,,base,SF
+3236,mail.template.reset,template_ids,テンプレート,mail.template,mail_template_mail_template_reset_rel,mail_template_reset_id,mail_template_id,base,SF
+2215,mail.thread,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+2227,mail.thread.blacklist,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+2242,mail.thread.cc,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+2255,mail.thread.main.attachment,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+3457,mail.thread.phone,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+2268,mail.tracking.duration.mixin,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+8974,mrp.account.wip.accounting,mo_ids,製造オーダ,mrp.production,mrp_account_wip_accounting_mrp_production_rel,mrp_account_wip_accounting_id,mrp_production_id,base,SF
+8173,mrp.bom,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+8200,mrp.bom,possible_product_template_attribute_value_ids,可能なプロダクトテンプレート属性値,product.template.attribute.value,,,,base,SF
+8243,mrp.bom.byproduct,bom_product_template_attribute_value_ids,バリアントに適用,product.template.attribute.value,mrp_bom_byproduct_product_template_attribute_value_rel,mrp_bom_byproduct_id,product_template_attribute_value_id,base,SF
+8242,mrp.bom.byproduct,possible_bom_product_template_attribute_value_ids,可能なプロダクトテンプレート属性値,product.template.attribute.value,,,,base,SF
+8222,mrp.bom.line,bom_product_template_attribute_value_ids,バリアントに適用,product.template.attribute.value,mrp_bom_line_product_template_attribute_value_rel,mrp_bom_line_id,product_template_attribute_value_id,base,SF
+8221,mrp.bom.line,possible_bom_product_template_attribute_value_ids,可能なプロダクトテンプレート属性値,product.template.attribute.value,,,,base,SF
+8746,mrp.consumption.warning,mrp_production_ids,MRP生産,mrp.production,mrp_consumption_warning_mrp_production_rel,mrp_consumption_warning_id,mrp_production_id,base,SF
+8456,mrp.production,allowed_uom_ids,許可された単位,uom.uom,,,,base,SF
+8458,mrp.production,lot_producing_ids,ロット/シリアル番号,stock.lot,mrp_production_stock_lot_rel,mrp_production_id,stock_lot_id,base,SF
+8433,mrp.production,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+8451,mrp.production,never_product_template_attribute_value_ids,値を割当てない,product.template.attribute.value,template_attribute_value_mrp_production_rel,production_id,template_attribute_value_id,base,SF
+8502,mrp.production,picking_ids,この製造オーダに関連したピッキング,stock.picking,,,,base,SF
+8449,mrp.production,product_variant_attributes,属性値,product.template.attribute.value,,,,base,SF
+8488,mrp.production,reference_ids,参照,stock.reference,stock_reference_production_rel,production_id,reference_id,base,SF
+8450,mrp.production,valid_product_template_attribute_line_ids,有効なプロダクト属性明細,product.template.attribute.line,,,,base,SF
+8950,mrp.production,wip_move_ids,仕掛品移動,account.move,wip_move_production_rel,production_id,move_id,base,SF
+8737,mrp.production.backorder,mrp_production_ids,MRP生産,mrp.production,mrp_production_mrp_production_backorder_rel,mrp_production_backorder_id,mrp_production_id,base,SF
+8413,mrp.production.group,child_ids,子製造オーダ,mrp.production.group,mrp_production_group_rel,parent_group_id,child_group_id,base,SF
+8414,mrp.production.group,parent_ids,親製造オーダ,mrp.production.group,mrp_production_group_rel,child_group_id,parent_group_id,base,SF
+8290,mrp.routing.workcenter,blocked_by_operation_ids,ブロック元,mrp.routing.workcenter,mrp_routing_workcenter_dependencies_rel,operation_id,blocked_by_id,base,SF
+8288,mrp.routing.workcenter,bom_product_template_attribute_value_ids,バリアントに適用,product.template.attribute.value,mrp_routing_workcenter_product_template_attribute_value_rel,mrp_routing_workcenter_id,product_template_attribute_value_id,base,SF
+8264,mrp.routing.workcenter,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+8291,mrp.routing.workcenter,needed_by_operation_ids,ブロック,mrp.routing.workcenter,mrp_routing_workcenter_dependencies_rel,blocked_by_id,operation_id,base,SF
+8287,mrp.routing.workcenter,possible_bom_product_template_attribute_value_ids,可能なプロダクトテンプレート属性値,product.template.attribute.value,,,,base,SF
+8559,mrp.unbuild,lot_producing_ids,ロット/シリアル番号,stock.lot,,,,base,SF
+8541,mrp.unbuild,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+8346,mrp.workcenter,alternative_workcenter_ids,代替作業区,mrp.workcenter,mrp_workcenter_alternative_rel,workcenter_id,alternative_workcenter_id,base,SF
+8943,mrp.workcenter,costs_hour_account_ids,原価時間勘定,account.analytic.account,account_analytic_account_mrp_workcenter_rel,mrp_workcenter_id,account_analytic_account_id,base,SF
+8942,mrp.workcenter,distribution_analytic_account_ids,分配分析勘定,account.analytic.account,,,,base,SF
+8309,mrp.workcenter,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+8347,mrp.workcenter,tag_ids,タグ,mrp.workcenter.tag,mrp_workcenter_mrp_workcenter_tag_rel,mrp_workcenter_id,mrp_workcenter_tag_id,base,SF
+8622,mrp.workorder,blocked_by_workorder_ids,ブロック元,mrp.workorder,mrp_workorder_dependencies_rel,workorder_id,blocked_by_id,base,SF
+8606,mrp.workorder,finished_lot_ids,ロット/シリアル番号,stock.lot,,,,base,SF
+8946,mrp.workorder,mo_analytic_account_line_ids,製造オーダ分析勘定明細,account.analytic.line,mrp_workorder_mo_analytic_rel,mrp_workorder_id,account_analytic_line_id,base,SF
+8623,mrp.workorder,needed_by_workorder_ids,ブロック,mrp.workorder,mrp_workorder_dependencies_rel,blocked_by_id,workorder_id,base,SF
+8581,mrp.workorder,product_variant_attributes,属性値,product.template.attribute.value,,,,base,SF
+8947,mrp.workorder,wc_analytic_account_line_ids,運転資本(WC)勘定明細,account.analytic.line,mrp_workorder_wc_analytic_rel,mrp_workorder_id,account_analytic_line_id,base,SF
+1950,onboarding.onboarding,step_ids,オンボーディングステップ,onboarding.onboarding.step,onboarding_onboarding_onboarding_onboarding_step_rel,onboarding_onboarding_id,onboarding_onboarding_step_id,base,SF
+1965,onboarding.onboarding.step,onboarding_ids,オンボーディング,onboarding.onboarding,onboarding_onboarding_onboarding_onboarding_step_rel,onboarding_onboarding_step_id,onboarding_onboarding_id,base,SF
+1941,onboarding.progress,progress_step_ids,プログレスステップトラッカー,onboarding.progress.step,onboarding_progress_onboarding_progress_step_rel,onboarding_progress_id,onboarding_progress_step_id,base,SF
+1986,onboarding.progress.step,progress_ids,関連したオンボーディング進捗トラッカー,onboarding.progress,onboarding_progress_onboarding_progress_step_rel,onboarding_progress_step_id,onboarding_progress_id,base,SF
+4511,payment.capture.wizard,transaction_ids,取引,payment.transaction,payment_capture_wizard_payment_transaction_rel,payment_capture_wizard_id,payment_transaction_id,base,SF
+4399,payment.method,provider_ids,プロバイダ,payment.provider,payment_method_payment_provider_rel,payment_method_id,payment_provider_id,base,SF
+4407,payment.method,supported_country_ids,国,res.country,payment_method_res_country_rel,payment_method_id,res_country_id,base,SF
+4408,payment.method,supported_currency_ids,通貨,res.currency,payment_method_res_currency_rel,payment_method_id,res_currency_id,base,SF
+4430,payment.provider,available_country_ids,国,res.country,payment_country_rel,payment_id,country_id,base,SF
+4431,payment.provider,available_currency_ids,通貨,res.currency,payment_currency_rel,payment_provider_id,currency_id,base,SF
+4422,payment.provider,payment_method_ids,対応支払方法,payment.method,payment_method_payment_provider_rel,payment_provider_id,payment_method_id,base,SF
+6512,payment.transaction,invoice_ids,請求書,account.move,account_invoice_transaction_rel,transaction_id,invoice_id,base,SF
+6559,payment.transaction,sale_order_ids,販売オーダ,sale.order,sale_order_transaction_rel,transaction_id,sale_order_id,base,SF
+3439,phone.blacklist,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+7982,picking.label.type,picking_ids,ピッキング,stock.picking,picking_label_type_stock_picking_rel,picking_label_type_id,stock_picking_id,base,SF
+8802,picking.label.type,production_ids,生産,mrp.production,mrp_production_picking_label_type_rel,picking_label_type_id,mrp_production_id,base,SF
+4127,portal.share,partner_ids,宛先,res.partner,portal_share_res_partner_rel,portal_share_id,res_partner_id,base,SF
+4137,portal.wizard,partner_ids,取引先,res.partner,portal_wizard_res_partner_rel,portal_wizard_id,res_partner_id,base,SF
+3710,product.attribute,product_tmpl_ids,関連プロダクト,product.template,product_attribute_product_template_rel,product_attribute_id,product_template_id,base,SF
+3730,product.attribute.value,pav_attribute_line_ids,行,product.template.attribute.line,product_attribute_value_product_template_attribute_line_rel,product_attribute_value_id,product_template_attribute_line_id,base,SF
+3750,product.category,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+7797,product.category,parent_route_ids,親ルート,stock.route,,,,base,SF
+7795,product.category,route_ids,ルート,stock.route,stock_route_categ,categ_id,route_id,base,SF
+7798,product.category,total_route_ids,合計ルート,stock.route,,,,base,SF
+6933,product.document,form_field_ids,フォームフィールドを含む,sale.pdf.form.field,product_document_sale_pdf_form_field_rel,product_document_id,sale_pdf_form_field_id,base,SF
+7930,product.label.layout,move_ids,仕訳,stock.move,product_label_layout_stock_move_rel,product_label_layout_id,stock_move_id,base,SF
+4013,product.label.layout,product_ids,プロダクト,product.product,product_label_layout_product_product_rel,product_label_layout_id,product_product_id,base,SF
+4014,product.label.layout,product_tmpl_ids,プロダクトテンプレート,product.template,product_label_layout_product_template_rel,product_label_layout_id,product_template_id,base,SF
+3857,product.pricelist,country_group_ids,国グループ,res.country.group,res_country_group_pricelist_rel,pricelist_id,res_country_group_id,base,SF
+3844,product.pricelist,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+5064,product.product,account_tag_ids,勘定タグ,account.account.tag,,,,base,SF
+3647,product.product,additional_product_tag_ids,バリアントタグ,product.tag,product_tag_product_product_rel,product_product_id,product_tag_id,base,SF
+3648,product.product,all_product_tag_ids,すべてのプロダクトタグ,product.tag,,,,base,SF
+3673,product.product,combo_ids,コンボの選択肢,product.combo,,,,base,SF
+3619,product.product,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+6569,product.product,optional_product_ids,オプションプロダクト,product.template,,,,base,SF
+3698,product.product,product_tag_ids,タグ,product.tag,,,,base,SF
+3636,product.product,product_template_attribute_value_ids,属性値,product.template.attribute.value,product_variant_combination,product_product_id,product_template_attribute_value_id,base,SF
+3637,product.product,product_template_variant_value_ids,バリアント値,product.template.attribute.value,product_variant_combination,product_product_id,product_template_attribute_value_id,base,SF
+7765,product.product,route_from_categ_ids,カテゴリルート,stock.route,,,,base,SF
+7764,product.product,route_ids,ルート,stock.route,,,,base,SF
+5061,product.product,supplier_taxes_id,仕入税,account.tax,,,,base,SF
+5060,product.product,taxes_id,販売税,account.tax,,,,base,SF
+3684,product.product,uom_ids,パッケージング,uom.uom,,,,base,SF
+3691,product.product,valid_product_template_attribute_line_ids,有効なプロダクト属性明細,product.template.attribute.line,,,,base,SF
+8054,product.replenish,allowed_route_ids,許可されたルート,stock.route,,,,base,SF
+8058,product.replenish,allowed_uom_ids,許可された単位,uom.uom,,,,base,SF
+3927,product.tag,product_ids,このタグを使用するすべてのプロダクトバリアント,product.product,,,,base,SF
+3926,product.tag,product_product_ids,プロダクトバリアント,product.product,product_tag_product_product_rel,product_tag_id,product_product_id,base,SF
+3925,product.tag,product_template_ids,プロダクトテンプレート,product.template,product_tag_product_template_rel,product_tag_id,product_template_id,base,SF
+5057,product.template,account_tag_ids,勘定タグ,account.account.tag,account_account_tag_product_template_rel,product_template_id,account_account_tag_id,base,SF
+3561,product.template,combo_ids,コンボの選択肢,product.combo,product_combo_product_template_rel,product_template_id,product_combo_id,base,SF
+3547,product.template,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+6577,product.template,optional_product_ids,オプションプロダクト,product.template,product_optional_rel,src_id,dest_id,base,SF
+3599,product.template,product_tag_ids,タグ,product.tag,product_tag_product_template_rel,product_template_id,product_tag_id,base,SF
+7791,product.template,route_from_categ_ids,カテゴリルート,stock.route,,,,base,SF
+7785,product.template,route_ids,ルート,stock.route,stock_route_product,product_id,route_id,base,SF
+5054,product.template,supplier_taxes_id,仕入税,account.tax,product_supplier_taxes_rel,prod_id,tax_id,base,SF
+5052,product.template,taxes_id,販売税,account.tax,product_taxes_rel,prod_id,tax_id,base,SF
+3575,product.template,uom_ids,パッケージング,uom.uom,product_template_uom_uom_rel,product_template_id,uom_uom_id,base,SF
+3584,product.template,valid_product_template_attribute_line_ids,有効なプロダクト属性明細,product.template.attribute.line,,,,base,SF
+3951,product.template.attribute.exclusion,value_ids,属性値,product.template.attribute.value,product_attr_exclusion_value_ids_rel,product_template_attribute_exclusion_id,product_template_attribute_value_id,base,SF
+3940,product.template.attribute.line,value_ids,値,product.attribute.value,product_attribute_value_product_template_attribute_line_rel,product_template_attribute_line_id,product_attribute_value_id,base,SF
+3967,product.template.attribute.value,ptav_product_variant_ids,関連バリアント,product.product,product_variant_combination,product_template_attribute_value_id,product_product_id,base,SF
+9120,purchase.order,duplicated_order_ids,複製されたオーダ,purchase.order,,,,base,SF
+9099,purchase.order,invoice_ids,請求書,account.move,account_move_purchase_order_rel,purchase_order_id,account_move_id,base,SF
+9069,purchase.order,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+9281,purchase.order,picking_ids,入荷,stock.picking,purchase_order_stock_picking_rel,purchase_order_id,stock_picking_id,base,SF
+9284,purchase.order,reference_ids,参照,stock.reference,stock_reference_purchase_rel,purchase_id,reference_id,base,SF
+9143,purchase.order.line,allowed_uom_ids,許可された単位,uom.uom,,,,base,SF
+9134,purchase.order.line,distribution_analytic_account_ids,分配分析勘定,account.analytic.account,,,,base,SF
+9291,purchase.order.line,move_dest_ids,ダウンストリーム移動代替,stock.move,stock_move_created_purchase_line_rel,created_purchase_line_id,move_id,base,SF
+9174,purchase.order.line,product_no_variant_attribute_value_ids,バリアントを作成しないプロダクト属性値,product.template.attribute.value,product_template_attribute_value_purchase_order_line_rel,purchase_order_line_id,product_template_attribute_value_id,base,SF
+9173,purchase.order.line,product_template_attribute_value_ids,属性値,product.template.attribute.value,,,,base,SF
+9142,purchase.order.line,tax_ids,税金,account.tax,account_tax_purchase_order_line_rel,purchase_order_line_id,account_tax_id,base,SF
+6941,quotation.document,form_field_ids,フォームフィールドを含む,sale.pdf.form.field,quotation_document_sale_pdf_form_field_rel,quotation_document_id,sale_pdf_form_field_id,base,SF
+6940,quotation.document,quotation_template_ids,見積テンプレート,sale.order.template,header_footer_quotation_template_rel,quotation_document_id,sale_order_template_id,base,SF
+5134,res.company,account_enabled_tax_country_ids,l10n-使用国,res.country,,,,base,SF
+5068,res.company,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+5141,res.company,multi_vat_foreign_country_ids,海外VAT対象国,res.country,,,,base,SF
+1172,res.company,parent_ids,親,res.company,,,,base,SF
+1206,res.company,uninstalled_l10n_module_ids,アンインストールされたL10Nモジュール,ir.module.module,,,,base,SF
+1183,res.company,user_ids,受け入れられたユーザ,res.users,res_company_users_rel,cid,user_id,base,SF
+928,res.country,country_group_ids,国グループ,res.country.group,res_country_res_country_group_rel,res_country_id,res_country_group_id,base,SF
+943,res.country.group,country_ids,国,res.country,res_country_res_country_group_rel,res_country_group_id,res_country_id,base,SF
+5870,res.country.group,exclude_state_ids,会計上の例外,res.country.state,res_country_group_res_country_state_rel,res_country_group_id,res_country_state_id,base,SF
+3993,res.country.group,pricelist_ids,価格表,product.pricelist,res_country_group_pricelist_rel,res_country_group_id,pricelist_id,base,SF
+1243,res.groups,all_implied_by_ids,間接的に継承するグループ,res.groups,,,,base,SF
+1241,res.groups,all_implied_ids,間接的に継承されるグループ,res.groups,,,,base,SF
+1227,res.groups,all_user_ids,ユーザおよび継承ユーザ,res.users,,,,base,SF
+1244,res.groups,disjoint_ids,排他グループ,res.groups,,,,base,SF
+1242,res.groups,implied_by_ids,継承グループ,res.groups,res_groups_implied_rel,hid,gid,base,SF
+1240,res.groups,implied_ids,継承元グループ,res.groups,res_groups_implied_rel,gid,hid,base,SF
+1231,res.groups,menu_access,アドレスメニュー,ir.ui.menu,ir_ui_menu_group_rel,gid,menu_id,base,SF
+1230,res.groups,rule_groups,ルール,ir.rule,rule_group_rel,group_id,rule_group_id,base,SF
+1226,res.groups,user_ids,ユーザ,res.users,res_groups_users_rel,gid,uid,base,SF
+1232,res.groups,view_access,ビュー,ir.ui.view,ir_ui_view_group_rel,group_id,view_id,base,SF
+1029,res.partner,category_id,タグ,res.partner.category,res_partner_res_partner_category_rel,partner_id,category_id,base,SF
+3108,res.partner,channel_ids,チャネル,discuss.channel,discuss_channel_member,partner_id,channel_id,base,SF
+4782,res.partner,duplicate_bank_partner_ids,重複銀行口座のある取引先,res.partner,,,,base,SF
+3080,res.partner,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+4858,res.partner.bank,duplicate_bank_partner_ids,重複銀行口座のある取引先,res.partner,,,,base,SF
+4830,res.partner.bank,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+989,res.partner.category,partner_ids,取引先,res.partner,res_partner_res_partner_category_rel,category_id,partner_id,base,SF
+2895,res.role,user_ids,ユーザ,res.users,res_role_res_users_rel,res_role_id,res_users_id,base,SF
+1281,res.users,all_group_ids,グループおよび継承グループ,res.groups,,,,base,SF
+1322,res.users,category_id,タグ,res.partner.category,,,,base,SF
+2937,res.users,channel_ids,チャネル,discuss.channel,,,,base,SF
+1275,res.users,company_ids,会社,res.company,res_company_users_rel,user_id,cid,base,SF
+4106,res.users,crm_team_ids,販売チーム,crm.team,,,,base,SF
+6366,res.users,duplicate_bank_partner_ids,重複銀行口座のある取引先,res.partner,,,,base,SF
+1280,res.users,group_ids,グループ,res.groups,res_groups_users_rel,uid,gid,base,SF
+2916,res.users,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+2900,res.users,role_ids,ユーザ役割,res.role,res_role_res_users_rel,res_users_id,res_role_id,base,SF
+6853,sale.advance.payment.inv,sale_order_ids,販売オーダ,sale.order,sale_advance_payment_inv_sale_order_rel,sale_advance_payment_inv_id,sale_order_id,base,SF
+6807,sale.mass.cancel.orders,sale_order_ids,キャンセルする販売オーダ,sale.order,sale_order_mass_cancel_wizard_rel,sale_mass_cancel_orders_id,sale_order_id,base,SF
+6661,sale.order,authorized_transaction_ids,承認された取引,payment.transaction,,,,base,SF
+6974,sale.order,available_quotation_document_ids,利用可能見積ドキュメント,quotation.document,,,,base,SF
+6668,sale.order,duplicated_order_ids,複製されたオーダ,sale.order,,,,base,SF
+6657,sale.order,invoice_ids,請求書,account.move,,,,base,SF
+6605,sale.order,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+9022,sale.order,mrp_production_ids,この販売オーダに関連した製造オーダ,mrp.production,,,,base,SF
+6976,sale.order,quotation_document_ids,ヘッダー/フッター,quotation.document,quotation_document_sale_order_rel,sale_order_id,quotation_document_id,base,SF
+8995,sale.order,stock_reference_ids,参照,stock.reference,stock_reference_sale_rel,sale_id,reference_id,base,SF
+6664,sale.order,tag_ids,タグ,crm.tag,sale_order_tag_rel,order_id,tag_id,base,SF
+6660,sale.order,transaction_ids,取引,payment.transaction,sale_order_transaction_rel,sale_order_id,transaction_id,base,SF
+6710,sale.order.line,allowed_uom_ids,許可された単位,uom.uom,,,,base,SF
+6978,sale.order.line,available_product_document_ids,利用可能プロダクトドキュメント,product.document,,,,base,SF
+6687,sale.order.line,distribution_analytic_account_ids,分配分析勘定,account.analytic.account,,,,base,SF
+6735,sale.order.line,invoice_lines,請求明細,account.move.line,sale_order_line_invoice_rel,order_line_id,invoice_line_id,base,SF
+6979,sale.order.line,product_document_ids,プロダクトドキュメント,product.document,sale_order_line_product_document_rel,sale_order_line_id,product_document_id,base,SF
+6704,sale.order.line,product_no_variant_attribute_value_ids,追加の値,product.template.attribute.value,product_template_attribute_value_sale_order_line_rel,sale_order_line_id,product_template_attribute_value_id,base,SF
+6702,sale.order.line,product_template_attribute_value_ids,属性値,product.template.attribute.value,,,,base,SF
+8999,sale.order.line,route_ids,ルート,stock.route,sale_order_line_stock_route_rel,sale_order_line_id,stock_route_id,base,SF
+6718,sale.order.line,tax_ids,税金,account.tax,account_tax_sale_order_line_rel,sale_order_line_id,account_tax_id,base,SF
+6980,sale.order.template,quotation_document_ids,ヘッダーとフッター,quotation.document,header_footer_quotation_template_rel,sale_order_template_id,quotation_document_id,base,SF
+6922,sale.order.template.line,allowed_uom_ids,許可された単位,uom.uom,,,,base,SF
+6986,sale.pdf.form.field,product_document_ids,プロダクトドキュメント,product.document,product_document_sale_pdf_form_field_rel,sale_pdf_form_field_id,product_document_id,base,SF
+6987,sale.pdf.form.field,quotation_document_ids,見積ドキュメント,quotation.document,quotation_document_sale_pdf_form_field_rel,sale_pdf_form_field_id,quotation_document_id,base,SF
+4291,sms.template.reset,template_ids,テンプレート,sms.template,sms_template_sms_template_reset_rel,sms_template_reset_id,sms_template_id,base,SF
+6430,spreadsheet.dashboard,company_ids,会社,res.company,res_company_spreadsheet_dashboard_rel,spreadsheet_dashboard_id,res_company_id,base,SF
+6432,spreadsheet.dashboard,favorite_user_ids,お気に入りユーザ,res.users,res_users_spreadsheet_dashboard_rel,spreadsheet_dashboard_id,res_users_id,base,SF
+6431,spreadsheet.dashboard,group_ids,グループ,res.groups,res_groups_spreadsheet_dashboard_rel,spreadsheet_dashboard_id,res_groups_id,base,SF
+6434,spreadsheet.dashboard,main_data_model_ids,メインデータモデル,ir.model,ir_model_spreadsheet_dashboard_rel,spreadsheet_dashboard_id,ir_model_id,base,SF
+8008,stock.backorder.confirmation,pick_ids,ピッキング,stock.picking,stock_picking_backorder_rel,stock_backorder_confirmation_id,stock_picking_id,base,SF
+7973,stock.inventory.adjustment.name,quant_ids,在庫数量,stock.quant,stock_inventory_adjustment_name_stock_quant_rel,stock_inventory_adjustment_name_id,stock_quant_id,base,SF
+7958,stock.inventory.conflict,quant_ids,保管ロット,stock.quant,stock_conflict_quant_rel,stock_inventory_conflict_id,stock_quant_id,base,SF
+7959,stock.inventory.conflict,quant_to_fix_ids,不整合,stock.quant,stock_inventory_conflict_stock_quant_rel,stock_inventory_conflict_id,stock_quant_id,base,SF
+7966,stock.inventory.warning,quant_ids,在庫数量,stock.quant,stock_inventory_warning_stock_quant_rel,stock_inventory_warning_id,stock_quant_id,base,SF
+7178,stock.location,child_internal_location_ids,子孫間の内部ロケーション,stock.location,,,,base,SF
+7452,stock.lot,delivery_ids,転送,stock.picking,,,,base,SF
+7433,stock.lot,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+7454,stock.lot,partner_ids,取引先,res.partner,,,,base,SF
+9318,stock.lot,purchase_order_ids,購買オーダ,purchase.order,,,,base,SF
+9014,stock.lot,sale_order_ids,販売オーダ,sale.order,,,,base,SF
+7236,stock.move,allowed_uom_ids,許可された単位,uom.uom,,,,base,SF
+8883,stock.move,analytic_account_line_ids,分析勘定明細,account.analytic.line,account_analytic_line_stock_move_rel,stock_move_id,account_analytic_line_id,base,SF
+9321,stock.move,created_purchase_line_ids,作成された購買オーダ明細,purchase.order.line,stock_move_created_purchase_line_rel,move_id,created_purchase_line_id,base,SF
+7291,stock.move,lot_ids,シリアルナンバー,stock.lot,,,,base,SF
+7245,stock.move,move_dest_ids,移動先移動,stock.move,stock_move_move_rel,move_orig_id,move_dest_id,base,SF
+7246,stock.move,move_orig_ids,元の移動,stock.move,stock_move_move_rel,move_dest_id,move_orig_id,base,SF
+7231,stock.move,never_product_template_attribute_value_ids,値を割当てない,product.template.attribute.value,template_attribute_value_stock_move_rel,move_id,template_attribute_value_id,base,SF
+8655,stock.move,order_finished_lot_ids,完成ロット/シリアル番号,stock.lot,,,,base,SF
+7255,stock.move,reference_ids,参照,stock.reference,stock_reference_move_rel,move_id,reference_id,base,SF
+7268,stock.move,route_ids,移動先ルート,stock.route,stock_route_move,move_id,route_id,base,SF
+7308,stock.move.line,allowed_uom_ids,許可された単位,uom.uom,,,,base,SF
+7339,stock.move.line,consume_line_ids,消費ライン,stock.move.line,stock_move_line_consume_rel,consume_line_id,produce_line_id,base,SF
+7340,stock.move.line,produce_line_ids,生産ライン,stock.move.line,stock_move_line_consume_rel,produce_line_id,consume_line_id,base,SF
+8081,stock.orderpoint.snooze,orderpoint_ids,補充ルール,stock.warehouse.orderpoint,stock_orderpoint_snooze_stock_warehouse_orderpoint_rel,stock_orderpoint_snooze_id,stock_warehouse_orderpoint_id,base,SF
+7866,stock.package,picking_ids,転送,stock.picking,,,,base,SF
+8072,stock.package.destination,move_line_ids,移動明細,stock.move.line,Products,stock_package_destination_id,stock_move_line_id,base,SF
+7818,stock.package.history,picking_ids,転送,stock.picking,stock_package_history_stock_picking_rel,stock_package_history_id,stock_picking_id,base,SF
+7841,stock.package.type,route_ids,ルート,stock.route,stock_package_type_stock_route_rel,stock_package_type_id,stock_route_id,base,SF
+7530,stock.picking,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+7573,stock.picking,package_history_ids,転送済梱包,stock.package.history,stock_package_history_stock_picking_rel,stock_picking_id,stock_package_history_id,base,SF
+7550,stock.picking,reference_ids,参照,stock.reference,,,,base,SF
+7508,stock.picking.type,favorite_user_ids,お気に入りユーザ,res.users,picking_type_favorite_user_rel,picking_type_id,user_id,base,SF
+7121,stock.putaway.rule,package_type_ids,梱包タイプ,stock.package.type,stock_package_type_stock_putaway_rule_rel,stock_putaway_rule_id,stock_package_type_id,base,SF
+8150,stock.put.in.pack,move_line_ids,移動明細,stock.move.line,stock_move_line_stock_put_in_pack_rel,stock_put_in_pack_id,stock_move_line_id,base,SF
+8155,stock.put.in.pack,origin_package_ids,元梱包,stock.package,,,,base,SF
+8151,stock.put.in.pack,package_ids,梱包,stock.package,stock_package_stock_put_in_pack_rel,stock_put_in_pack_id,stock_package_id,base,SF
+8134,stock.quant.relocate,quant_ids,在庫数量,stock.quant,stock_quant_stock_quant_relocate_rel,stock_quant_relocate_id,stock_quant_id,base,SF
+7639,stock.reference,move_ids,在庫移動,stock.move,stock_reference_move_rel,reference_id,move_id,base,SF
+7640,stock.reference,picking_ids,転送,stock.picking,,,,base,SF
+8686,stock.reference,production_ids,生産,mrp.production,stock_reference_production_rel,reference_id,production_id,base,SF
+9322,stock.reference,purchase_ids,購買,purchase.order,stock_reference_purchase_rel,reference_id,purchase_id,base,SF
+9016,stock.reference,sale_ids,販売,sale.order,stock_reference_sale_rel,reference_id,sale_id,base,SF
+8815,stock.replenishment.info,bom_ids,部品表,mrp.bom,mrp_bom_stock_replenishment_info_rel,stock_replenishment_info_id,mrp_bom_id,base,SF
+9336,stock.replenishment.info,supplierinfo_ids,仕入先情報,product.supplierinfo,product_supplierinfo_stock_replenishment_info_rel,stock_replenishment_info_id,product_supplierinfo_id,base,SF
+7648,stock.replenish.mixin,allowed_route_ids,許可されたルート,stock.route,,,,base,SF
+8092,stock.request.count,quant_ids,在庫数量,stock.quant,stock_quant_stock_request_count_rel,stock_request_count_id,stock_quant_id,base,SF
+7215,stock.route,categ_ids,プロダクトカテゴリ,product.category,stock_route_categ,route_id,categ_id,base,SF
+7214,stock.route,product_ids,プロダクト,product.template,stock_route_product,route_id,product_id,base,SF
+7217,stock.route,warehouse_ids,倉庫,stock.warehouse,stock_route_warehouse,route_id,warehouse_id,base,SF
+9018,stock.rules.report,so_route_ids,特定のルートを適用する,stock.route,stock_route_stock_rules_report_rel,stock_rules_report_id,stock_route_id,base,SF
+8026,stock.rules.report,warehouse_ids,倉庫,stock.warehouse,stock_rules_report_stock_warehouse_rel,stock_rules_report_id,stock_warehouse_id,base,SF
+7701,stock.scrap,allowed_uom_ids,許可された単位,uom.uom,,,,base,SF
+7687,stock.scrap,message_partner_ids,フォロワー (取引先),res.partner,,,,base,SF
+7715,stock.scrap,scrap_reason_tag_ids,廃棄理由,stock.scrap.reason.tag,stock_scrap_stock_scrap_reason_tag_rel,stock_scrap_id,stock_scrap_reason_tag_id,base,SF
+7676,stock.warehouse,resupply_wh_ids,補充元,stock.warehouse,stock_wh_resupply_table,supplied_wh_id,supplier_wh_id,base,SF
+7658,stock.warehouse,route_ids,ルート,stock.route,stock_route_warehouse,warehouse_id,route_id,base,SF
+7395,stock.warehouse.orderpoint,allowed_replenishment_uom_ids,許可された補充単位,uom.uom,,,,base,SF
+7400,stock.warehouse.orderpoint,rule_ids,使用されるルール,stock.rule,,,,base,SF
+8036,stock.warn.insufficient.qty,quant_ids,在庫数量,stock.quant,,,,base,SF
+8043,stock.warn.insufficient.qty.scrap,quant_ids,在庫数量,stock.quant,,,,base,SF
+8718,stock.warn.insufficient.qty.unbuild,quant_ids,在庫数量,stock.quant,,,,base,SF
+7803,uom.uom,route_ids,ルート,stock.route,,,,base,SF
+2088,utm.campaign,tag_ids,タグ,utm.tag,utm_tag_rel,tag_id,campaign_id,base,SF
+6056,validate.account.move,move_ids,仕訳,account.move,account_move_validate_account_move_rel,validate_account_move_id,account_move_id,base,SF
+1732,web_tour.tour,user_consumed_ids,ユーザ消費済,res.users,res_users_web_tour_tour_rel,web_tour_tour_id,res_users_id,base,SF
