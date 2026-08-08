@@ -8,7 +8,8 @@
 2. `02_fit_gap_report.md` — 自動確定できない要件を検出し、安全に除外
 3. `03_knowledge_graph_report.md` — モデル、要件、シナリオの関係をNeo4j用グラフへ変換
 4. `04_odoo_addon_mapping_report.md` — 確定候補だけを非破壊的なOdooオーバーレイ候補へ変換
-5. `pipeline_snapshot.json` — 各段階の実行集計
+5. `05_customer_confirmation_materials.md` — 構造化データから顧客確認用の表・接続図を生成
+6. `pipeline_snapshot.json` — 各段階の実行集計
 
 ```mermaid
 flowchart TD
@@ -18,6 +19,7 @@ flowchart TD
     D --> E["Fit & Gap分離"]
     E --> F["Neo4j Knowledge Graph"]
     F --> G["Odoo実装候補"]
+    F --> I["顧客確認用の表・接続図"]
     F --> H["将来: 影響範囲・ベンダー資料"]
 ```
 
@@ -27,6 +29,7 @@ flowchart TD
 - 6業務領域を横断して、モデル・設定・業務シナリオ間の参照をグラフ化できること
 - 解決できない参照を黙って補完せず、Fit & Gapとして隔離できること
 - Odoo標準モデルを書き換えず、レビュー可能なオーバーレイ候補へ変換できること
+- 同じ構造化データから、非エンジニアも確認できるテーブル一覧・フィールド一覧・接続図を生成できること
 
 ## 匿名化方針
 

@@ -49,6 +49,7 @@ ChatGPTが担当したのは、資料の意味解釈と構造化候補の作成�
 - [P2: Fit & Gap検出例](showcase/02_fit_gap_report.md)
 - [P3: Neo4j投入・参照整合性検証](showcase/03_knowledge_graph_report.md)
 - [P4: Odooアドオン候補への変換](showcase/04_odoo_addon_mapping_report.md)
+- [P5: 顧客確認用のテーブル・接続資料](showcase/05_customer_confirmation_materials.md)
 - [実行スナップショット](showcase/pipeline_snapshot.json)
 
 これらは架空の説明用サンプルをゼロから作ったものではなく、PoCの実行履歴から公開可能な構造・判定・集計値を抽出し、匿名化したものです。元の実行成果641ファイル、約160MBは、重複実行、バックアップ、顧客由来情報を含むため公開していません。

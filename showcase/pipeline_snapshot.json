@@ -29,6 +29,15 @@
     "report_only_gap_records": 10,
     "writes_to_standard_business_models": false
   },
+  "p5_customer_confirmation_materials": {
+    "source_pack": "p3_er_all_apps",
+    "table_rows": 193,
+    "field_table_groups": 178,
+    "field_rows": 611,
+    "application_topology_maps": 6,
+    "overall_architecture_maps": 1,
+    "full_customer_pack_published": false
+  },
   "redactions": [
     "company_names",
     "person_names",
