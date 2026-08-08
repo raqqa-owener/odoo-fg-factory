@@ -1,0 +1,42 @@
+{
+  "document_status": "sanitized_execution_snapshot",
+  "source": "actual_poc_execution_artifacts",
+  "source_archive": {
+    "file_count": 641,
+    "expanded_size_mb": 160,
+    "published_raw": false
+  },
+  "p1_structuring": {
+    "apps": 6,
+    "standard_model_candidates": 31,
+    "normalized_relationships": 656
+  },
+  "p2_fit_gap": {
+    "report_only_items": 10,
+    "automatic_resolution": false,
+    "unresolved_items_preserved": true
+  },
+  "p3_knowledge_graph": {
+    "nodes": 839,
+    "relationships": 2729,
+    "dangling_relationships": 0
+  },
+  "p4_odoo_mapping": {
+    "source_nodes": 300,
+    "source_relationships": 1146,
+    "approved_candidate_records": 90,
+    "needs_review_records": 93,
+    "report_only_gap_records": 10,
+    "writes_to_standard_business_models": false
+  },
+  "redactions": [
+    "company_names",
+    "person_names",
+    "organization_and_authority_data",
+    "internal_run_ids",
+    "source_documents",
+    "uploaded_archives",
+    "backups",
+    "customer_specific_master_data"
+  ]
+}

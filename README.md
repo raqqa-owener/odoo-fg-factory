@@ -40,6 +40,19 @@ ChatGPTが担当したのは、資料の意味解釈と構造化候補の作成�
 
 詳細は [公開HANDOFF](docs/PUBLIC_HANDOFF.md) と [アーキテクチャ](docs/ARCHITECTURE.md) を参照してください。
 
+## 実行成果のショーケース
+
+コードだけではPoCが何を処理したのか分かりにくいため、実際の実行成果から、企業名・人物・内部ID・原文由来情報を除去した代表例を公開しています。
+
+- [成果物の読み方](showcase/README.md)
+- [P1: ERP要件の構造化結果](showcase/01_p1_structuring_report.md)
+- [P2: Fit & Gap検出例](showcase/02_fit_gap_report.md)
+- [P3: Neo4j投入・参照整合性検証](showcase/03_knowledge_graph_report.md)
+- [P4: Odooアドオン候補への変換](showcase/04_odoo_addon_mapping_report.md)
+- [実行スナップショット](showcase/pipeline_snapshot.json)
+
+これらは架空の説明用サンプルをゼロから作ったものではなく、PoCの実行履歴から公開可能な構造・判定・集計値を抽出し、匿名化したものです。元の実行成果641ファイル、約160MBは、重複実行、バックアップ、顧客由来情報を含むため公開していません。
+
 ## 到達していない範囲
 
 次の機能は将来構想であり、このPoCでは完成していません。
