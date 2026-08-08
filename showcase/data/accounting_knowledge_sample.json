@@ -1,0 +1,165 @@
+{
+  "document_status": "sanitized_structural_sample",
+  "source_dataset_status": "export_complete",
+  "notice": "This sample preserves the retrieval units and link structure of the actual dataset. Company-specific identifiers, source filenames and proprietary mappings were replaced.",
+  "dataset_metrics": {
+    "table_definitions": 170,
+    "table_fields": 6804,
+    "table_relations": 1499,
+    "business_rails": 28,
+    "business_scenarios": 342,
+    "functional_components": 97,
+    "validated_links": 297
+  },
+  "canonical_table_dictionary": {
+    "table_definitions": [
+      {
+        "table_key": "table.legacy_general_journal_header",
+        "legacy_table_name": "LegacyGeneralJournalHeader",
+        "table_name_ja": "一般仕訳ヘッダ",
+        "table_type": "transaction_header",
+        "business_area": "general_ledger",
+        "primary_business_meaning": "一般仕訳の伝票単位情報を保持する",
+        "possible_odoo_model": "account.move",
+        "fit_level": "strong_candidate",
+        "related_rail_keys": ["rail.general_ledger_posting"],
+        "related_scenario_keys": ["scenario.post_general_journal"]
+      },
+      {
+        "table_key": "table.legacy_general_journal_line",
+        "legacy_table_name": "LegacyGeneralJournalLine",
+        "table_name_ja": "一般仕訳明細",
+        "table_type": "transaction_line",
+        "business_area": "general_ledger",
+        "primary_business_meaning": "勘定科目、金額、分析軸を明細単位で保持する",
+        "possible_odoo_model": "account.move.line",
+        "fit_level": "strong_candidate",
+        "related_rail_keys": ["rail.general_ledger_posting"],
+        "related_scenario_keys": ["scenario.post_general_journal"]
+      }
+    ],
+    "table_fields": [
+      {
+        "field_key": "field.general_journal_header.journal_number",
+        "table_key": "table.legacy_general_journal_header",
+        "legacy_field_name": "JournalNumber",
+        "field_name_ja": "仕訳番号",
+        "data_type": "string",
+        "required": true,
+        "key_role": "business_key",
+        "possible_odoo_field": "account.move.name",
+        "confidence": "strong_candidate"
+      },
+      {
+        "field_key": "field.general_journal_line.analytic_dimension",
+        "table_key": "table.legacy_general_journal_line",
+        "legacy_field_name": "AnalyticDimension",
+        "field_name_ja": "分析軸",
+        "data_type": "string",
+        "required": false,
+        "key_role": "analysis_attribute",
+        "possible_odoo_field": "account.move.line.analytic_distribution",
+        "confidence": "candidate_only"
+      }
+    ],
+    "table_relations": [
+      {
+        "relation_key": "relation.general_journal_header_to_line",
+        "relation_type": "one_to_many",
+        "source_table_key": "table.legacy_general_journal_header",
+        "source_field": "JournalNumber",
+        "target_table_key": "table.legacy_general_journal_line",
+        "target_field": "JournalNumber",
+        "business_meaning": "仕訳ヘッダと明細を伝票番号で接続する",
+        "confidence": "confirmed_link"
+      }
+    ]
+  },
+  "canonical_business_rails": [
+    {
+      "canonical_rail_key": "rail.general_ledger_posting",
+      "rail_name_ja": "一般仕訳計上",
+      "rail_type": "accounting_process",
+      "rail_purpose": "業務取引から会計仕訳を作成し元帳へ計上する",
+      "upstream_rails": ["rail.source_transaction"],
+      "downstream_rails": ["rail.financial_reporting"],
+      "status": "active"
+    }
+  ],
+  "canonical_business_scenarios": [
+    {
+      "canonical_scenario_key": "scenario.post_general_journal",
+      "canonical_rail_key": "rail.general_ledger_posting",
+      "scenario_name_ja": "一般仕訳を登録・承認・計上する",
+      "scenario_type": "standard_flow",
+      "actor": "accounting_operator",
+      "trigger": "計上対象となる業務取引または手入力仕訳が発生する",
+      "preconditions": ["対象期間がオープンしている", "勘定科目が有効である"],
+      "steps": ["仕訳を入力する", "分析軸を検証する", "承認する", "元帳へ計上する"],
+      "exception_paths": ["期間クローズ", "分析軸不整合", "借方貸方不一致"],
+      "expected_outcomes": ["仕訳と元取引の追跡関係が保持される"],
+      "related_components": ["component.general_journal_entry"],
+      "related_tables": ["table.legacy_general_journal_header", "table.legacy_general_journal_line"],
+      "scenario_status": "reviewed_candidate"
+    }
+  ],
+  "functional_components": [
+    {
+      "canonical_component_key": "component.general_journal_entry",
+      "component_name_ja": "一般仕訳入力",
+      "component_type": "screen_and_service",
+      "business_purpose": "一般仕訳を入力し検証・承認へ渡す",
+      "related_rail_keys": ["rail.general_ledger_posting"],
+      "related_scenario_keys": ["scenario.post_general_journal"],
+      "related_table_candidates": ["table.legacy_general_journal_header", "table.legacy_general_journal_line"],
+      "status": "candidate"
+    }
+  ],
+  "validated_links": [
+    {
+      "link_key": "link.general_journal_entry.to_header",
+      "link_type": "component_uses_table",
+      "component_key": "component.general_journal_entry",
+      "scenario_key": "scenario.post_general_journal",
+      "rail_key": "rail.general_ledger_posting",
+      "table_key": "table.legacy_general_journal_header",
+      "field_keys": ["field.general_journal_header.journal_number"],
+      "link_confidence": "strong_candidate",
+      "manual_review_needed": true,
+      "evidence": ["sanitized_source_specification_reference"]
+    }
+  ],
+  "implementation_boundary": [
+    {
+      "target_key": "component.general_journal_entry",
+      "target_type": "functional_component",
+      "odoo_base_decision": "odoo_enterprise_standard",
+      "odoo_keeps": ["source transaction link", "analytic dimensions", "posting request status"],
+      "external_accounting_service_takes": ["statutory ledger", "closing and tax book"],
+      "integration_required": true,
+      "integration_direction": "odoo_to_external_accounting",
+      "manual_review_needed": true
+    }
+  ],
+  "agent_retrieval_example": {
+    "request": "部門別配賦を追加した場合、一般仕訳と外部会計連携のどこに影響するか",
+    "retrieve": [
+      "rail.general_ledger_posting",
+      "scenario.post_general_journal",
+      "component.general_journal_entry",
+      "table.legacy_general_journal_header",
+      "table.legacy_general_journal_line",
+      "field.general_journal_line.analytic_dimension",
+      "implementation_boundary"
+    ],
+    "produce": [
+      "affected_functions",
+      "affected_tables_and_fields",
+      "interface_changes",
+      "customer_questions",
+      "unresolved_items",
+      "test_viewpoints",
+      "vendor_specification_draft"
+    ]
+  }
+}

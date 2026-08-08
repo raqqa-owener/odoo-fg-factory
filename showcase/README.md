@@ -4,12 +4,14 @@
 
 ## 読む順番
 
-1. `01_p1_structuring_report.md` — ERP仕様からOdoo標準置換候補を構造化
-2. `02_fit_gap_report.md` — 自動確定できない要件を検出し、安全に除外
-3. `03_knowledge_graph_report.md` — モデル、要件、シナリオの関係をNeo4j用グラフへ変換
-4. `04_odoo_addon_mapping_report.md` — 確定候補だけを非破壊的なOdooオーバーレイ候補へ変換
-5. `05_customer_confirmation_materials.md` — 構造化データから顧客確認用の表・接続図を生成
-6. `pipeline_snapshot.json` — 各段階の実行集計
+1. `00_accounting_knowledge_dataset.md` — 会計資料から作成した検索用Knowledge Dataset
+2. `data/accounting_knowledge_sample.json` — 原本と同じ関係構造を持つ匿名化データ例
+3. `01_p1_structuring_report.md` — ERP仕様からOdoo標準置換候補を構造化
+4. `02_fit_gap_report.md` — 自動確定できない要件を検出し、安全に除外
+5. `03_knowledge_graph_report.md` — モデル、要件、シナリオの関係をNeo4j用グラフへ変換
+6. `04_odoo_addon_mapping_report.md` — 確定候補だけを非破壊的なOdooオーバーレイ候補へ変換
+7. `05_customer_confirmation_materials.md` — 構造化データから顧客確認用の表・接続図を生成
+8. `pipeline_snapshot.json` — 各段階の実行集計
 
 ```mermaid
 flowchart TD
@@ -26,6 +28,7 @@ flowchart TD
 ## 何を実証したか
 
 - 確率的なLLMの読解結果を、そのまま実装へ流さず、決定論的な検証処理へ渡せること
+- テーブル、フィールド、リレーション、業務シナリオ、機能、実装境界を検索可能なデータとして保持できること
 - 6業務領域を横断して、モデル・設定・業務シナリオ間の参照をグラフ化できること
 - 解決できない参照を黙って補完せず、Fit & Gapとして隔離できること
 - Odoo標準モデルを書き換えず、レビュー可能なオーバーレイ候補へ変換できること

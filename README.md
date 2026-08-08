@@ -45,6 +45,8 @@ ChatGPTが担当したのは、資料の意味解釈と構造化候補の作成�
 コードだけではPoCが何を処理したのか分かりにくいため、実際の実行成果から、企業名・人物・内部ID・原文由来情報を除去した代表例を公開しています。
 
 - [成果物の読み方](showcase/README.md)
+- [会計Knowledge Datasetとエージェント検索構想](showcase/00_accounting_knowledge_dataset.md)
+- [匿名化したデータ構造サンプル](showcase/data/accounting_knowledge_sample.json)
 - [P1: ERP要件の構造化結果](showcase/01_p1_structuring_report.md)
 - [P2: Fit & Gap検出例](showcase/02_fit_gap_report.md)
 - [P3: Neo4j投入・参照整合性検証](showcase/03_knowledge_graph_report.md)

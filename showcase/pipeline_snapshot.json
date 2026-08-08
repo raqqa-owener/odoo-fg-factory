@@ -6,6 +6,24 @@
     "expanded_size_mb": 160,
     "published_raw": false
   },
+  "accounting_knowledge_dataset": {
+    "status": "export_complete",
+    "table_definitions": 170,
+    "table_fields": 6804,
+    "table_properties": 7650,
+    "table_indexes": 340,
+    "table_relations": 1499,
+    "field_groups": 954,
+    "business_rails": 28,
+    "business_scenarios": 342,
+    "functional_components": 97,
+    "validated_links": 297,
+    "odoo_base_scope_items": 637,
+    "accounting_overlay_items": 637,
+    "japan_template_items": 637,
+    "raw_dataset_published": false,
+    "agent_retrieval_pipeline_completed": false
+  },
   "p1_structuring": {
     "apps": 6,
     "standard_model_candidates": 31,
